@@ -3,17 +3,18 @@
 
 using namespace std;
 
-int fibon_elem(int pos)
+bool fibon_elem(int pos,int &elem)
 {
-    int elem = 1;
-    int n_1=1,n_2=1;
-    
-    if(pos==0)
+    if (pos <= 0||pos>1024)
     {
         elem = 0;
+        return false;
     }
     else
     {
+        elem = 1;
+        int n_1=1,n_2=1;
+
         for (int i = 2; i < pos; i++)
         {
             /* code */
@@ -22,20 +23,30 @@ int fibon_elem(int pos)
             n_1 = elem;
         }
     }
-    return elem;
+    
+        
+    return true;
 }
 
 int main(void)
 {
-    int pos;
-    int res;
+    int pos,res,elem;
     cout<<"please enter your pos\n";
     while(cin>>pos)
     {
-        res = fibon_elem(pos);    
-        cout<<"fibon res is "<<res<<endl;
+        res = fibon_elem(pos,elem);
+        if (res == false)
+        {
+            cout<<"err\n";
+            /* code */
+        }
+        else
+        {
+            cout<<"fibon res is "<<elem<<endl;
+            /* code */
+        }
+        
     }
-
     system("Pause");
     return 0;
 }
