@@ -1,6 +1,5 @@
 #include <iostream>
 #include <windows.h>
-
 using namespace std;
 
 bool fibon_elem(int pos,int &elem)
@@ -23,10 +22,10 @@ bool fibon_elem(int pos,int &elem)
             n_1 = elem;
         }
     }
-    
-        
+
     return true;
 }
+
 
 int main(void)
 {
