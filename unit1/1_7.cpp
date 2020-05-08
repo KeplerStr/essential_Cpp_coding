@@ -31,6 +31,7 @@ int main(void)
         cout<<wordstring[i]<<" ";/* code */
     }
     cout<<endl;
+    
     sort(wordstring.begin(),wordstring.end());
     
     if(!outfile)
