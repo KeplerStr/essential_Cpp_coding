@@ -67,6 +67,7 @@ int main()
 {
     int num[3] = {1,3,4};
     double f_num[3] = {1.2,3.4,2.3};
+    
     string str[3] = {"hello","apple","book"};
     cout<<max(num,3)<<endl;
     cout<<max(f_num,3)<<endl;
